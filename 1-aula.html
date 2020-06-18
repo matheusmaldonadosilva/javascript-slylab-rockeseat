@@ -1,0 +1,333 @@
+<html>
+
+<head>
+
+    <title>Curso Javascript</title>
+
+</head>
+
+<body>
+
+    <script>
+
+    var usuarios = [
+        {
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+    ];
+            // console.log("O " + usuarios[0] + " possui as habilidades: " + usuarios[1]);
+            // console.log("O " + usuarios[0] + " possui as habilidades: " + usuarios[1]);
+
+
+        // function usuarios(array){
+        //      for (let value of usuarios) {
+        //         //console.log(value);
+        //         console.log('O', value.nome, 'possui as habilidades: ', value.habilidades.join(', '));
+        //     }
+        //     return usuarios;
+        // }
+
+            function candidato(array) {
+                    for (var value of array) {
+                        console.log('O', value.nome, 'possui as habilidades: ', value.habilidades.join(', '));
+                    }
+                }
+           var resultado = candidato(usuarios);
+           console.log(resultado);
+    </script>
+
+
+
+    
+
+    <!-- <script>
+
+        function experiencia(anos) {
+
+            var anos;
+
+
+            if(anosEstudo <= 0 && anosEstudo >= 1){
+                anos = "Iniciante";
+
+            }else if(anosEstudo < 1 && anosEstudo >= 3) {
+                anos = "Intermediário";
+            }
+            else if (anosEstudo < 3 && anosEstudo >= 6) {
+                anos = "Avançado";
+            }
+            else if (anosEstudo >= 7) {
+                anos = "Jedi Master";
+            }
+
+            return anos;
+
+            }
+
+
+            var anosEstudo = 7;
+            var resultado = experiencia(anosEstudo);
+
+            console.log(resultado);
+
+
+        // De 0-1 ano: Iniciante
+        // De 1-3 anos: Intermediário
+        // De 3-6 anos: Avançado
+        // De 7 acima: Jedi Master
+    </script> -->
+
+<!-- <script>
+
+    function temHabilidade(skills) {
+
+        var verificar = skills.indexOf("Javascript");
+        
+
+        if(verificar === 'Javascript'){
+            verificar = true;
+        }
+
+        return verificar;
+    }
+    var skills = ["Javascript", "ReactJS", "React Native"];
+    var verificado = temHabilidade(skills); // true ou false
+
+    if(verificado == 0){
+    verificado = true;
+    console.log(verificado);
+    }
+   
+</script> -->
+   
+
+
+
+    <!-- <script>
+
+        function pares(x, y){
+
+             while (x <= y) {
+                if (x % 2 == 0) {
+                  console.log(x);
+                }
+                x++;
+            }
+
+            return x;
+        }
+
+        var resultados = pares(32, 321);
+
+              
+    </script> -->
+
+
+<!-- <script>
+
+    function retornaEndereco(endereco) {
+        
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        return endereco;
+    }
+
+    // 
+
+
+        var enderecos = retornaEndereco(); // passabdo para variavel enderecos o array da função retornaEndereco
+
+        console.log(enderecos); // trazer o array
+
+        console.log("O usuário mora em " + enderecos.cidade + "/" + enderecos.uf + ", no bairro " + enderecos.bairro + ", na rua " + enderecos.rua + " com nº " + enderecos.numero);
+        // passo a variavel enderecos + o atributo do array
+
+</script> -->
+
+
+    <!-- <script>
+
+        function exibeAlgo(){
+            console.log('Hello World');
+        }
+
+        setInterval(exibeAlgo, 1000); // a cada 1s a função sera executada
+        // quando queremos referencia apenas uma funcao não usamos o ()
+
+        setTimeout(exibeAlgo, 5000); // é executado apenas uma vez
+
+    </script> -->
+
+<!-- 
+<script>
+
+    for( var i = 0; i <= 100; i ++){
+
+        console.log(i);
+    }
+
+    var j = 0;
+
+    while (j <= 100) {  // usamos o while quando não sabemos quantas vezes o fluxo sera executado
+        console.log(j);
+
+        j++;
+    }
+
+</script> -->
+
+
+<!-- <script>
+
+    var sexo = 'M';
+
+
+    // if(sexo === 'M') {
+    //     return 'Masculino';
+    // }else {
+    //     return 'Feminino';
+    // }
+
+        var returno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+        console.log(retorno);
+</script> -->
+
+
+<!-- <script>
+
+var sexo = 'M'
+
+var masculino = (sexo === 'M');
+
+// if( sexo === 'M') {
+//     masculino = true;
+// } else {
+//     masculino = false;
+// }
+
+console.log(masculino);
+
+</script> -->
+
+
+<!-- <script>
+
+    var sexo = 'F';
+
+    if( sexo !== 'M') {
+        console.log('Ok');
+    }
+
+</script> -->
+
+
+    <!-- <script>
+
+        var sexo = 'F', idade = 10;
+
+        if(sexo === 'M' || idade >= 18){
+            console.log('Ok');
+        }
+
+    </script> -->
+
+    <!-- <script>
+        function retornaSexo(sexo) {
+            switch (sexo) {
+                case 'M':
+                return 'Masculino';
+
+                case 'F':
+                return 'Feminino';
+
+                default:
+                return 'Outro';
+            }
+        }
+
+    </script> -->
+
+
+
+    <!-- <script>
+
+        function retornaSexo(sexo){
+            if(sexo === 'M'){ /* === verifica se o tipo da variavel tbm é igual */
+                return 'Masculino';
+            }else if (sexo === 'F'){
+                return 'Feminino';
+            }else {
+                return 'Outro';
+            }
+        }
+
+
+        var resultado = retornaSexo('M');
+        console.log(resultado);
+    </script> -->
+
+    <!-- <script>
+        function soma(numero1, numero2){
+            var resultado = numero1 + numero2;
+            return resultado;
+        }
+
+        var resultado = soma(1, 2);
+        console.log(resultado)
+
+    </script> -->
+
+<!-- <script>
+    var x = 10, y = 5;
+
+    x = x + 3;
+
+    console.log(x);
+
+    var resultado = x + y;
+
+    console.log(resultado);
+
+</script> -->
+
+
+    <!-- <script>
+
+        var nome = "Diego";
+        var idade = 23;
+        var peso = 80.5;
+        var humano = true;
+
+        var alunos = ['Diego', 'Gabriel', 'Lucas'];
+
+        var aluno = {
+            nome: 'Diego',
+            idade: 23,
+            peso: 80.5,
+            humano: true
+        };
+
+
+        console.log(alunos[1]);
+        console.log(aluno.nome);
+
+        console.log('Hello World');
+    </script> -->
+
+</body>
+
+
+
+
+</html>
