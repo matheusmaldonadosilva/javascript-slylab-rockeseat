@@ -19,12 +19,12 @@
 
         <!-- <input id="nome"> -->
         <button class="botao">Apertar</button>
-        <button class="vetor">Apertar</button>
 
-    </div>
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
 
-    
-    <script>
+
+        <script>
 
         // var inputElement = document.getElementById('nome');
         // console.log(inputElement);
@@ -69,48 +69,64 @@
         // boxElement.style.height = 100;
         // boxElement.style.backgroundColor = '#f00';
 
-    </script>
+        </script>
 
 
-    <script>
+        <script>
 
-        var btnAperta = document.querySelector('button.botao');
+            var btnAperta = document.querySelector('button.botao');
 
-        btnAperta.onclick = function () {
+            btnAperta.onclick = function () {
 
-            var ElementSquare = document.createElement("div");
-            ElementSquare.style.width = 100;
-            ElementSquare.style.height = 100;
-            ElementSquare.style.backgroundColor = '#f00';
+                var ElementSquare = document.createElement("div");
+                ElementSquare.style.width = 100;
+                ElementSquare.style.height = 100;
+                ElementSquare.style.backgroundColor = '#f00';
 
-            ElementSquare.classList.add('box');
+                ElementSquare.classList.add('box');
 
 
-            ElementSquare.addEventListener('mouseover', function(){
-                var letters = "0123456789ABCDEF";
-                var color = "#";
-                for (var i = 0; i < 6; i++) {
-                    color += letters[Math.floor(Math.random() * 16)];
-                }
-                return this.style.background = color;
-            });
+                ElementSquare.addEventListener('mouseover', function () {
+                    var letters = "0123456789ABCDEF";
+                    var color = "#";
+                    for (var i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return this.style.background = color;
+                });
 
-            document.body.appendChild(ElementSquare);
+                document.body.appendChild(ElementSquare);
 
-        }
-    </script>
+            }
+        </script>
 
-    <script>
-    
-    var btnVetor = document.querySelector('button.vetor');
+        <script>
 
-    btnVetor.onclick = function() {
-        var ElementUl = document.createElement("ul");
-        var nomes = ["Diego", "Gabriel", "Lucas"];
-        ElementUl.setAttribute('ul', nomes);
-    }
-    
-    </script>
+            let nomes = ["Diego", "Gabriel", "Lucas"];
+            let element = document.body;
+            let newUl = document.createElement('ul');
+
+
+            for (var i = 0; i < nomes.length; i++) {
+                let newLi = document.createElement("li");
+                let itemLi = document.createTextNode(nomes[i]);
+                newLi.appendChild(itemLi);
+                newUl.appendChild(newLi);
+                element.appendChild(newUl);
+            }
+
+            function adicionar() {
+                let inputElement = document.querySelector('input[name=nome');
+                let newLi = document.createElement('li');
+                let itemLi = document.createTextNode(inputElement.value); // para pegar os valores usamos inputElement.value
+                newLi.appendChild(itemLi);
+                newUl.appendChild(newLi);
+                element.appendChild(newUl);
+            }
+
+
+
+        </script>
 
 
 </body>
